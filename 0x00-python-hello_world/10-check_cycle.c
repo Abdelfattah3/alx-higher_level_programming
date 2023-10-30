@@ -9,7 +9,7 @@ int check_cycle(listint_t *list)
 	listint_t *c;
 	int i;
 
-	c = list;
+	c = list->next;
 	i = list->n;
 	if (!list)
 	{
@@ -17,11 +17,11 @@ int check_cycle(listint_t *list)
 	}
 	while (c)
 	{
-		c = c->next;
 		if (c && c->n == i)
 		{
 			return (1);
 		}
+		c = c->next;
 	}
 	return (0);
 }
