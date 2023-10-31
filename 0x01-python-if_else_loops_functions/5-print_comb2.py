@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-for a in range(0, 10):
-    for b in range(0, 10):
-        if str(a)+str(b) != "98":
-            print("{:d}{:d}, ".format(a, b), end="")
-        else:
-            print("{:d}{:d}".format(a, b))
+for _ in range(0, 100):
+    if _ <= 98:
+        print("{:02d}, ".format(_), end="")
+    else:
+        print("{:02d}".format(_))
