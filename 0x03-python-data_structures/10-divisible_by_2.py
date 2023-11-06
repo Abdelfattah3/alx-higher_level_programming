@@ -2,7 +2,7 @@
 def divisible_by_2(my_list=[]):
 
     if not my_list:
-        return False
+        return None
     list_res = []
     for x in my_list:
         if my_list[x] % 2 == 0:
