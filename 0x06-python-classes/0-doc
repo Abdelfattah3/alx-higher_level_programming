@@ -1,0 +1,2 @@
+#!/bin/bash
+python3 -c "print(__import__('0-square').Square.__doc__)"
