@@ -12,8 +12,8 @@ class Square:
              size: int of the size of a square.
              position: tuple of the coordination of the size.
         '''
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -64,7 +64,7 @@ class Square:
         if (not isinstance(value, tuple) or
                 len(value) != 2 or
                 not all(isinstance(i, int) for i in value) or
-                not all(i >= 0 for num in value)):
+                not all(i >= 0 for i in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
