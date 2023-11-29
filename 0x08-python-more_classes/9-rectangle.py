@@ -159,4 +159,8 @@ class Rectangle:
         Args:
             size (int, optional): the new rectangle size. Defaults to 0.
         """
+        if not isinstance(size, int):
+            raise TypeError("width must be an integer")
+        if size < 0:
+            raise ValueError("width must be >= 0")
         return cls(size, size)
