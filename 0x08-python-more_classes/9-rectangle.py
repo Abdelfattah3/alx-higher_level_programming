@@ -19,8 +19,8 @@ class Rectangle:
             width (int, optional): the width. Defaults to 0.
             height (int, optional): the height. Defaults to 0.
         """
-        self.height = height
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -124,11 +124,7 @@ class Rectangle:
         Args:
             size (int, optional): the new rectangle size. Defaults to 0.
         """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-        return (cls(size, size))
+        return cls(width=size, height=size)
 
     def __str__(self):
         """Prints the area of the rectangle with #.
