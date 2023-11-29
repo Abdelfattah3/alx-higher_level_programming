@@ -81,7 +81,7 @@ class Rectangle:
         Returns:
             int: the area.
         """
-        return self.height * self.width
+        return self.__height * self.__width
 
     def perimeter(self):
         """Calculates the perimeter.
@@ -89,9 +89,9 @@ class Rectangle:
         Returns:
             int: the perimeter.
         """
-        if self.height == 0 or self.width == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
-        return (self.width + self.height) * 2
+        return (self.__width + self.__height) * 2
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -111,8 +111,8 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        a1 = rect_1.height * rect_1.width
-        a2 = rect_2.height * rect_2.width
+        a1 = rect_1.area()
+        a2 = rect_2.area()
         if a1 >= a2:
             return rect_1
         return rect_2
@@ -124,7 +124,11 @@ class Rectangle:
         Args:
             size (int, optional): the new rectangle size. Defaults to 0.
         """
-        return cls(size, size)
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        return (cls(size, size))
 
     def __str__(self):
         """Prints the area of the rectangle with #.
@@ -132,10 +136,10 @@ class Rectangle:
         Returns:
             str: the area filled with #
         """
-        if self.height == 0 or self.width == 0:
+        if self.__height == 0 or self.__width == 0:
             return ""
-        return ((str(self.print_symbol) * self.width + "\n") *
-                self.height)[:-1]
+        return ((str(self.print_symbol) * self.__width + "\n") *
+                self.__height)[:-1]
 
     def __repr__(self):
         """return a string of the Rectangle info.
@@ -143,8 +147,8 @@ class Rectangle:
         Returns:
             str: of the Rectangle info.
         """
-        return ("Rectangle(" + str(self.width) + ", " +
-                str(self.height) + ")")
+        return ("Rectangle(" + str(self.__width) + ", " +
+                str(self.__height) + ")")
 
     def __del__(self):
         """Deletes the object."""
