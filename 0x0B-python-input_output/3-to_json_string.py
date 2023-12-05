@@ -12,6 +12,6 @@ def to_json_string(my_obj):
         my_obj (any_type): the object
 
     Returns:
-        Return: returns the JSON rep. of an object 
+        JSON: returns the JSON rep. of an object 
     """
     return json.dumps(my_obj)

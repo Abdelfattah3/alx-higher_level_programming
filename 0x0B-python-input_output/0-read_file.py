@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Reading module."""
+
+
 def read_file(filename=""):
     """Reads from a file.
 
