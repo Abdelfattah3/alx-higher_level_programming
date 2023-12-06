@@ -33,6 +33,25 @@ integer_validator is an instance method:
     <class 'function'>
 
 
+integer_validator method called via class with no args:
+    >>> bg.__class__.integer_validator()
+    Traceback (most recent call last):
+      File "/usr/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[6]>", line 1, in <module>
+        bg.__class__.integer_validator()
+    TypeError: BaseGeometry.integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+
+integer_validator method called via class with no args:
+    >>> bg.__class__.integer_validator("new")
+    Traceback (most recent call last):
+      File "/usr/lib/python3.10/doctest.py", line 1350, in __run
+        exec(compile(example.source, filename, "single",
+      File "<doctest 7-base_geometry.txt[7]>", line 1, in <module>
+        bg.__class__.integer_validator("new")
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
 integer_validator method float.0 value:
     >>> bg.integer_validator("foo", 3.0)
     Traceback (most recent call last):
