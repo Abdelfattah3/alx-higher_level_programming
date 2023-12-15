@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Class rectangle from base class"""
-
-
 from base import Base
 
 
