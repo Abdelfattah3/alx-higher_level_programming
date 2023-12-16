@@ -37,20 +37,20 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """return width"""
+        """return x"""
         return self.__x
 
     @x.setter
     def x(self, value):
-        """set the width with value"""
+        """set the x with value"""
         self.__x = value
 
     @property
     def y(self):
-        """return width"""
+        """return y"""
         return self.__y
 
     @y.setter
     def y(self, value):
-        """set the width with value"""
+        """set the y with value"""
         self.__y = value
