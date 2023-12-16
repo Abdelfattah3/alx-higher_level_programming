@@ -10,7 +10,47 @@ class Rectangle(Base):
         """Rectangle class initializing"""
 
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
+    @property
+    def width(self):
+        """return width"""
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """set the width with value"""
+        self.__width = value
+
+    @property
+    def height(self):
+        """return height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """set the height with value"""
+        self.__height = value
+
+    @property
+    def x(self):
+        """return width"""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """set the width with value"""
+        self.__x = value
+
+    @property
+    def y(self):
+        """return width"""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """set the width with value"""
+        self.__y = value
